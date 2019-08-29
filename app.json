@@ -1,13 +1,50 @@
 {
   "pages": [
+    "pages/home/index",
+    "pages/category/index",
+    "pages/cart/index",
+    "pages/me/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#fbf9fc",
+    "navigationBarTitleText": "京东商城",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fbf9fc"
+  },
+  "tabBar": {
+    "color": "#959394",
+    "selectedColor": "#e93b3d",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [{
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-hl.png"
+
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "image/category.png",
+        "selectedIconPath": "image/category-hl.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "image/cart.png",
+        "selectedIconPath": "image/cart-hl.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/me-hl.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
