@@ -1,3 +1,5 @@
+//引入接口
+const interfaces = require("../../utils/urlconfig.js")
 // pages/home/index.js
 Page({
 
@@ -5,6 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    swipers: [],
+    logos: [],
+    pageRow: [],
+    quicks: [],
 
   },
 
@@ -12,7 +18,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //加载中
+    wx.showLoading({
+      title: "加载中",
+    });
+    //请求数据
+    wx.request({
+      url: interfaces.homepage,
+      header: {
+        "content-type": "application/json" //默认 ，返回的数据类型
+      },
+      success: (res) => {
+        console.log(res.data)
+        console.log(this)
+        this.setData({
+          swipers: res.data.swipers,
+          logos: res.data.logos,
+          pageRow: res.data.pageRow,
+          quicks: res.data.quicks,
+        })
+        wx.hideLoading()
+      },
 
+    })
   },
 
   /**
